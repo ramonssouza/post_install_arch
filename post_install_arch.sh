@@ -56,6 +56,7 @@ pacman -S htop
 
 echo "Instalando o Vim!"
 pacman -S vim
+export EDITOR=vim
 
 echo "Instalando timeshift"
 paru -S timeshift
