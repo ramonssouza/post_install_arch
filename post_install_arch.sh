@@ -20,7 +20,15 @@ pacman -S thunderbird
 
 echo "Ferramentas e utilitários 👨‍💻️"
 
+# https://www.youtube.com/watch?v=i5TSqHurvh4
+systemctl start bluetooth.service
+systemctl enable bluetooth.service
+cd .cache
+chmod -R 777 obexd
+
 echo "Mapeamento da mesa digitalizadora Wacom Intuos S Pad pad"
+
+pacman -S xf86-input-wacom
 
 xsetwacom set "Wacom Intuos S Pad pad" Button 1 key "lsuper"
 xsetwacom set "Wacom Intuos S Pad pad" Button 2 key "lshift"
