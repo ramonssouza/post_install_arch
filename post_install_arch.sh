@@ -1,6 +1,8 @@
 
 # Uncomment the “multilib” section.
 
+# https://www-reddit-com.translate.goog/r/archlinux/comments/p0e6qp/separate_home_partition_on_btrfs/?_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt-BR
+
 nano /etc/pacman.conf
 
 echo "Hablitar extensões no Gnome 👨‍💻️"
@@ -205,6 +207,8 @@ gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folder
 echo -n "ramonssouza93@gmail.com" | sha256sum | cut -d ' ' -f1
 
 generator-sha256.sh
+
+
 
 echo "FIM DA INSTALAÇÃO! 👏️"
 
