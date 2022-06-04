@@ -152,7 +152,7 @@ done
 echo "Instalando Latex full"
 pacman -S texlive-most texlive-core texlive-bin
 
-
+sudo pacman -S linux-headers
 git clone https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module
 cd "acer-predator-turbo-and-rgb-keyboard-linux-module"
 sudo chmod +x ./*.sh
