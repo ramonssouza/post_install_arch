@@ -155,17 +155,20 @@ pacman -S texlive-most texlive-core texlive-bin
 
 git clone https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module
 cd "acer-predator-turbo-and-rgb-keyboard-linux-module"
-chmod +x ./*.sh
+sudo chmod +x ./*.sh
+sudo pacman -S rsync
+
 sudo ./install_service.sh
 sudo cp ./facer_rgb.py /usr/local/bin
 
 # https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
 
 
-echo -e "facer_rgb.py -m 3 -s 5 -b 100" >> /usr/local/bin/rgb-keyboard-start.sh
+sudo echo "facer_rgb.py -m 3 -s 5 -b 100" | sudo tee -a /usr/local/bin/rgb-keyboard-start.sh > /dev/null
+
 sudo chmod +x /usr/local/bin/rgb-keyboard-start.sh
 
-echo -e "[Unit]\nDescription=Start rgb my keyboard\nWants=network.target\nAfter=syslog.target network-online.target\n[Service]\nType=simple\nExecStart=/usr/local/bin/rgb-keyboard-start.sh\nRestart=on-failure\nRestartSec=10\nKillMode=process\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/rgb-keyboard-start.service
+sudo echo -e "[Unit]\nDescription=Start rgb my keyboard\nWants=network.target\nAfter=syslog.target network-online.target\n[Service]\nType=simple\nExecStart=/usr/local/bin/rgb-keyboard-start.sh\nRestart=on-failure\nRestartSec=10\nKillMode=process\n[Install]\nWantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/rgb-keyboard-start.service > /dev/null
 
 sudo chmod 640 /etc/systemd/system/rgb-keyboard-start.service 
 sudo systemctl daemon-reload	
