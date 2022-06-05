@@ -3,6 +3,7 @@
 
 # https://www-reddit-com.translate.goog/r/archlinux/comments/p0e6qp/separate_home_partition_on_btrfs/?_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt-BR
 # https://www.youtube.com/watch?v=dohxv1ULcL4&t=1751s
+# https://www.youtube.com/watch?v=_YtgszmnfN8
 # https://gitlab.com/eflinux/arch-basic.git
 # https://www.youtube.com/watch?v=BgesUogmHec
 
