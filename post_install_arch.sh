@@ -169,7 +169,8 @@ sudo echo "facer_rgb.py -m 3 -s 5 -b 100" | sudo tee -a /usr/local/bin/rgb-keybo
 
 sudo chmod +x /usr/local/bin/rgb-keyboard-start.sh
 
-sudo echo -e "[Unit]\nDescription=Start rgb my keyboard\nWants=network.target\nAfter=syslog.target network-online.target\n[Service]\nType=simple\nExecStart=/usr/local/bin/rgb-keyboard-start.sh\nRestart=on-failure\nRestartSec=10\nKillMode=process\n[Install]\nWantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/rgb-keyboard-start.service > /dev/null
+sudo echo -e "[Unit]\nDescription=Start rgb my keyboard\nWants=network.target\nAfter=syslog.target network-online.target\n[Service]\nType=simple\nExecStart=/bin/bash /usr/local/bin/rgb-keyboard-start.sh
+\nRestart=on-failure\nRestartSec=10\nKillMode=process\n[Install]\nWantedBy=multi-user.target" | sudo tee -a /etc/systemd/system/rgb-keyboard-start.service > /dev/null
 
 sudo chmod 640 /etc/systemd/system/rgb-keyboard-start.service 
 sudo systemctl daemon-reload	
