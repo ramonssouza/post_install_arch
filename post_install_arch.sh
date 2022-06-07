@@ -165,7 +165,7 @@ sudo cp ./facer_rgb.py /usr/local/bin
 # https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
 
 
-sudo echo "facer_rgb.py -m 3 -s 5 -b 100" | sudo tee -a /usr/local/bin/rgb-keyboard-start.sh > /dev/null
+sudo echo "#!/bin/bash\nfacer_rgb.py -m 3 -s 5 -b 100" | sudo tee -a /usr/local/bin/rgb-keyboard-start.sh > /dev/null
 
 sudo chmod +x /usr/local/bin/rgb-keyboard-start.sh
 
