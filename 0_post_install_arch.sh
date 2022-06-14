@@ -219,9 +219,23 @@ yay -S zotero-bin
 yay -S obsidian-appimage
 
 #######################################
-echo "Instalando Latex full"
+echo "Instalando Latex full e Markdown"
 #######################################
 
+sudo pacman -S neovim
+sudo pacman -S pnpm
+sudo pacman -S yarn
+sudo pacman -S npm
+sudo pacman -S cargo
+
+yay -S asdf-vm
+source /opt/asdf-vm/asdf.sh
+
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+#Inserir no.zshrc
+# export PATH=~/.cargo/bin:~/.local/bin:$PATH
+
+sudo pacman -S pandoc
 sudo pacman -S texlive-most texlive-core texlive-bin
 
 echo "FIM DA INSTALAÇÃO! 👏️"
