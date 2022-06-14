@@ -164,7 +164,7 @@ echo "Instalano R!"
 
 sudo pacman -S r
 
-yay -S rstudio-desktop
+yay -S rstudio-desktop-bin
 
 # https://wiki.archlinux.org/title/R
 
