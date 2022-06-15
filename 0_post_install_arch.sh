@@ -51,14 +51,17 @@ echo "Suporte para extração e criação de arquivos compactados"
 
 sudo pacman -S cabextract lzip p7zip unrar
 
-
-
 #######################################
 echo "Instalando zathura-pdf!"
 #######################################
 
 sudo pacman -S zathura-pdf-mupdf
 
+#######################################
+echo "Instalando Calibre!"
+#######################################
+
+sudo pacman -S calibre
 #######################################
 echo "Instalando ZSH!"
 #######################################
