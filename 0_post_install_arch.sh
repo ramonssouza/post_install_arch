@@ -115,10 +115,16 @@ sudo pacman -S xclip
 yay -S neovim-symlinks
 
 #######################################
-echo "Instalando timeshift"
+echo "Instalando timeshift!"
 #######################################
 
 yay -S timeshift
+
+#######################################
+echo "Instalando rclone!"
+#######################################
+
+sudo pacman -S rclone
 
 #######################################
 echo "Instalando bitwarden 👨‍💻️"
