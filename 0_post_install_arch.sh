@@ -1,3 +1,8 @@
+echo "Hablitar extensões no Gnome 👨‍💻️"
+git clone https://aur.archlinux.org/chrome-gnome-shell.git
+cd chrome-gnome-shell
+makepkg -si
+
 
 sudo pacman -S nvidia-inst
 nvidia-inst -p
@@ -8,6 +13,8 @@ sudo pacman -S gnome-backgrounds
 # gnome shell extension for switching GPU profiles on Nvidia Optimus systems
 # GPU profile selector
 
+systemctl start bluetooth.service
+systemctl enable bluetooth.service
 
 #######################################
 echo "Instalando drivers predator!"
