@@ -10,6 +10,8 @@ nvidia-inst -p
 yay -S envycontrol
 sudo pacman -S gnome-backgrounds
 
+yay -S wonderwall
+
 # gnome shell extension for switching GPU profiles on Nvidia Optimus systems
 # GPU profile selector
 
