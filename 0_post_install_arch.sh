@@ -5,6 +5,9 @@ nvidia-inst -p
 yay -S envycontrol
 sudo pacman -S gnome-backgrounds
 
+# gnome shell extension for switching GPU profiles on Nvidia Optimus systems
+# GPU profile selector
+
 
 #######################################
 echo "Instalando drivers predator!"
