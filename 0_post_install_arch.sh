@@ -1,4 +1,11 @@
 
+sudo pacman -S nvidia-inst
+nvidia-inst -p
+
+yay -S envycontrol
+sudo pacman -S gnome-backgrounds
+
+
 #######################################
 echo "Instalando drivers predator!"
 #######################################
