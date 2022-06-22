@@ -38,6 +38,8 @@ sudo chmod +x ./*.sh
 
 sudo ./install_service.sh
 
+sudo cp  ./facer_rgb.py  /usr/bin/
+
 #######################################
 echo "Instalar Arandr 👨‍💻️"
 #######################################
