@@ -233,7 +233,7 @@ sudo pacman -S qgis
 
 yay -S grass
 
-yay -S saga-gis
+yay -S saga-gis --fm vim
 
 #######################################
 echo "Instalando Steam"
