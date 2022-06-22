@@ -40,6 +40,8 @@ sudo ./install_service.sh
 
 sudo cp  ./facer_rgb.py  /usr/bin/
 
+echo 'facer_rgb.py -m 2 -s 3 -b 100' | tee -a ~/.config/plasma-workspace/env/facer_rgb_run.sh
+
 #######################################
 echo "Instalar Arandr 👨‍💻️"
 #######################################
