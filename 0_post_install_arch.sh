@@ -70,15 +70,17 @@ sudo pacman -S thunderbird
 echo "Mapeamento da mesa digitalizadora Wacom Intuos S Pad pad"
 #######################################
 
-sudo sudo pacman -S xf86-input-wacom
+sudo pacman -S kcm-wacomtablet
 
-xsetwacom set "Wacom Intuos S Pad pad" Button 1 key "lsuper"
+#sudo pacman -S xf86-input-wacom
 
-xsetwacom set "Wacom Intuos S Pad pad" Button 2 key "lshift"
+#xsetwacom set "Wacom Intuos S Pad pad" Button 1 key "lsuper"
 
-xsetwacom set "Wacom Intuos S Pad pad" Button 3 key "lctrl"
+#xsetwacom set "Wacom Intuos S Pad pad" Button 2 key "lshift"
 
-xsetwacom set "Wacom Intuos S Pad pad" Button 8 key "alt"
+#xsetwacom set "Wacom Intuos S Pad pad" Button 3 key "lctrl"
+
+#xsetwacom set "Wacom Intuos S Pad pad" Button 8 key "alt"
 
 #######################################
 echo "Suporte para extração e criação de arquivos compactados"
