@@ -293,6 +293,8 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 sudo pacman -S pandoc
 sudo pacman -S texlive-most texlive-core texlive-bin
 
+paru -S whatsapp-nativefier
+
 echo "FIM DA INSTALAÇÃO! 👏️"
 
 
