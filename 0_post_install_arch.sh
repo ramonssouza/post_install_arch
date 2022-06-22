@@ -217,6 +217,8 @@ sudo pacman -S r
 
 yay -S rstudio-desktop-bin
 
+python3 python-virtualenv python-pip 
+
 # https://wiki.archlinux.org/title/R
 
 #######################################
