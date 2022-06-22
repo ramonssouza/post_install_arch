@@ -1,8 +1,12 @@
+# sudo pacman-mirrors -f 5
+
 echo "Hablitar extensões no Gnome 👨‍💻️"
 git clone https://aur.archlinux.org/chrome-gnome-shell.git
 cd chrome-gnome-shell
 makepkg -si
 
+# https://github.com/Askannz/optimus-manager
+# https://www.youtube.com/watch?v=RZdWVntmvI8
 
 sudo pacman -S nvidia-inst
 nvidia-inst -p
