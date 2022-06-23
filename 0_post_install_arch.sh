@@ -295,6 +295,9 @@ sudo pacman -S texlive-most texlive-core texlive-bin
 
 paru -S whatsapp-nativefier
 
+# Vs Code
+sudo pacman -S gnome-keyring libsecret libgnome-keyring
+
 echo "FIM DA INSTALAÇÃO! 👏️"
 
 
