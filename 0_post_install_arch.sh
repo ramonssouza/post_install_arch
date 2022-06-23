@@ -205,6 +205,9 @@ echo "Navegadores da Internet"
 
 # dnf -y install firefox 
 
+# Manjaro
+sudo pacman -S brave-browser
+
 #######################################
 echo "Instalano cmake!"
 #######################################
