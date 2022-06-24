@@ -9,6 +9,9 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
+sudo pacman -S intel-ucode
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 # sudo pacman-mirrors -f 5
 
 echo "Hablitar extensões no Gnome 👨‍💻️"
