@@ -330,7 +330,9 @@ sudo gpasswd -a $USER input
 
 # reboot
 
-libinput-gestures-setup start  
+libinput-gestures-setup start
+
+paru -S ttf-ms-fonts
  
 libinput-gestures-setup autostart  
 echo "FIM DA INSTALAÇÃO! 👏️"
