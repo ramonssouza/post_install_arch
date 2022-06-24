@@ -306,6 +306,19 @@ sudo pacman -S gnome-keyring libsecret libgnome-keyring
 
 paru -S youtubedl-gui
 
+sudo pamac install libinput-gestures                                                                                                                                                                                         ✔ 
+
+sudo pamac install xdotool 
+
+sudo pamac install gestures 
+
+sudo gpasswd -a $USER input
+
+# reboot
+
+libinput-gestures-setup start  
+ 
+libinput-gestures-setup autostart  
 echo "FIM DA INSTALAÇÃO! 👏️"
 
 
