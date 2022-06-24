@@ -1,3 +1,14 @@
+# Enable parallel downloading in Pacman in Arch Linux
+sudo vim /etc/pacman.conf
+
+# Find the following line and uncomment it:
+ParallelDownloads = 5
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
 # sudo pacman-mirrors -f 5
 
 echo "Hablitar extensões no Gnome 👨‍💻️"
