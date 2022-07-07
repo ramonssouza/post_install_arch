@@ -65,4 +65,15 @@ AutoEnable=false
 
 AutoEnable=true
 
+# Acer predator turbo and rgb keyboard-linux-module
+
+git clone https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module
+cd "acer-predator-turbo-and-rgb-keyboard-linux-module"
+chmod +x ./*.sh
+sudo ./install_service.sh
+
+sudo cp ./facer_rgb.py /usr/local/bin
+
+### cp ./rgb-keyboard-start.desktop ~/.config/autostart/
+
 
