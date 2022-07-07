@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=rgb-keyboard
+Comment=Start rgb my keyboard
+Exec=facer_rgb.py -m 2 -s 3 -b 100
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
