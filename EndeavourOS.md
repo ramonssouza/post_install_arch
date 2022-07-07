@@ -66,6 +66,20 @@ AutoEnable=false
 
 AutoEnable=true
 
+# ToucheggKDE
+yay -S touchegg
+
+git clone https://github.com/NayamAmarshe/ToucheggKDE.git
+cd Touchegg*
+mkdir ~/.config/touchegg
+cp touch* ~/.config/touchegg/
+
+## Pinch Gestures:
+
+   - 3 Fingers PINCH IN/OUT: Desktops Grid View
+   - 2 Fingers PINCH IN/OUT: Zoom IN/OUT
+   - [Browsers] 4 Fingers PINCH IN/OUT: Switch Tabs
+
 # Libreoffice 👨‍💻️
 
 sudo pacman -S libreoffice-still-pt-br jre-openjdk
