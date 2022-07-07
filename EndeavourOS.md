@@ -116,6 +116,12 @@ cp touch* ~/.config/touchegg/
    - 2 Fingers PINCH IN/OUT: Zoom IN/OUT
    - [Browsers] 4 Fingers PINCH IN/OUT: Switch Tabs
 
+# Enable and setup Bluetooth devices
+sudo pacman -S bluedevil
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth 
+sudo systemctl enable --now bluetooth
+
 # Libreoffice 👨‍💻️
 
 sudo pacman -S libreoffice-still-pt-br jre-openjdk
