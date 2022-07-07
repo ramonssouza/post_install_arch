@@ -72,6 +72,9 @@ sudo pacman -S libreoffice-still-pt-br jre-openjdk
 
 yay -S libreoffice-extension-vero
 
+## Microsoft fonts
+yay -S ttf-ms-win11-auto
+
 # "Mapeamento da mesa digitalizadora Wacom Intuos S Pad pad"
 
 
