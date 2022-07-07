@@ -66,6 +66,15 @@ AutoEnable=false
 
 AutoEnable=true
 
+# instead of the hacking shutdown initcpio task, try to create
+
+sudo nano /usr/lib/systemd/system-shutdown/nvidia.shutdown
+#!/bin/sh
+# remove nvidia modules
+/usr/bin/modprobe -r nvidia_drm nvidia_modeset nvidia_uvm && /usr/bin/modprobe -r nvidia
+
+sudo chmod +x /usr/lib/systemd/system-shutdown/nvidia.shutdown
+
 # ToucheggKDE
 yay -S touchegg
 
