@@ -152,15 +152,13 @@ yay -S r-jmvcore
 
 yay -S openboard
 
-#######################################
-echo "Aplicativos Geo 👨‍💻️"
-#######################################
+# "Aplicativos Geo 👨‍💻️"
 
 sudo pacman -S qgis
 
 yay -S grass
 
-yay -S saga-gis --fm vim
+yay -S saga-gis
 
 #######################################
 echo "Instalando Steam"
