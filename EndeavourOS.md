@@ -1,29 +1,40 @@
 # Optimus Switch – Another Solution for Optimus Laptops
 
 ## vide: https://discovery.endeavouros.com/nvidia/optimus-switch-another-solution-for-optimus-laptops/2021/04/
+
 ## Be sure to change the linux-headers package to match the kernel you are using. For example the zen kernel uses the linux-zen-headers package and the lts kernel uses the linux-lts-headers package.
 
 sudo pacman -S nvidia-settings
+
 sudo pacman -S linux-headers acpi_call-dkms mesa-demos xorg-xrandr xf86-video-intel git
 
 ## Enable acpi_call by typing:
+
 sudo modprobe acpi_call
 
 ## Make sure that there are no video related config files on your system. Look in the following folders:
 
 /etc/X11/
+
 /etc/X11/xorg.conf.d/
+
 /etc/modprobe.d/
+
 /etc/modules-load.d/
 
 ## KDE (SDDM)
+
 git clone https://github.com/dglt1/optimus-switch-sddm.git
+
 cd ~/optimus-switch-sddm
+
 chmod +x install.sh
+
 sudo ./install.sh
 
 
 ## For nVidia mode – sudo set-nvidia.sh
+
 ## For Intel mode – sudo set-intel.sh
 
 ## Installing the GUI Indicator/ Switcher Optimus-Indicator
@@ -31,8 +42,11 @@ sudo ./install.sh
 sudo pacman -S libappindicator-gtk3 libappindicator-gtk2 libnotify mesa-utils
 
 git clone https://github.com/linesma/Optimus-indicator.git
+
 cd Optimus-indicator
+
 chmod a+x setup.py
+
 sudo ./setup.py install
 
 ## Awesome Window Manager Instructions.
@@ -46,10 +60,12 @@ sudo ./setup.py install
 run manjaroptimus-appindicator
 
 ### Save and close the file.
+
 ### Reboot the computer to have it load.
 
 
 # How to enable/disable Bluetooth at startup
+
 sudo nano /etc/bluetooth/main.conf
 
 ## Find this section:
@@ -69,18 +85,29 @@ AutoEnable=true
 # instead of the hacking shutdown initcpio task, try to create
 
 sudo nano /usr/lib/systemd/system-shutdown/nvidia.shutdown
+
 #!/bin/sh
+
 # remove nvidia modules
+
 /usr/bin/modprobe -r nvidia_drm nvidia_modeset nvidia_uvm && /usr/bin/modprobe -r nvidia
 
 sudo chmod +x /usr/lib/systemd/system-shutdown/nvidia.shutdown
 
 # ToucheggKDE
+
 yay -S touchegg
 
+sudo systemctl enable touchegg.service
+
+sudo systemctl start touchegg
+
 git clone https://github.com/NayamAmarshe/ToucheggKDE.git
+
 cd Touchegg*
+
 mkdir ~/.config/touchegg
+
 cp touch* ~/.config/touchegg/
 
 ## Pinch Gestures:
@@ -96,10 +123,10 @@ sudo pacman -S libreoffice-still-pt-br jre-openjdk
 yay -S libreoffice-extension-vero
 
 ## Microsoft fonts
+
 yay -S ttf-ms-win11-auto
 
 # "Mapeamento da mesa digitalizadora Wacom Intuos S Pad pad"
-
 
 sudo pacman -S kcm-wacomtablet
 
@@ -122,7 +149,9 @@ sudo pacman -S htop
 # "Instalando o Vim!"
 
 sudo pacman -S vim neovim
+
 sudo pacman -S xclip
+
 yay -S neovim-symlinks
 
 # "Instalando timeshift!"
@@ -146,7 +175,6 @@ sudo pacman -S ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plu
 sudo pacman -S obs-studio
 
 # "Insalação do Audacity"
-
 
 sudo pacman -S audacity
 
@@ -192,9 +220,7 @@ echo "Instalando Steam"
 
 sudo pacman -S steam
 
-#######################################
-echo "Motagem de Hd!"
-#######################################
+# "Motagem de Hd!"
 
 #sudo blkid
 
@@ -204,44 +230,23 @@ echo "Motagem de Hd!"
 
 #echo "Instalando VS Code!"
 
-#yay -S visual-studio-code-bin
+yay -S visual-studio-code-bin
 
-#######################################
-echo "Instalando Zoteiro"
-#######################################
+# "Instalando Zoteiro"
 
 yay -S zotero-bin
 
 yay -S obsidian-appimage
 
-#######################################
-echo "Instalando Latex full e Markdown"
-#######################################
-
-sudo pacman -S neovim
-sudo pacman -S pnpm
-sudo pacman -S yarn
-sudo pacman -S npm
-sudo pacman -S cargo
-
-yay -S asdf-vm
-source /opt/asdf-vm/asdf.sh
-
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-#Inserir no.zshrc
-# export PATH=~/.cargo/bin:~/.local/bin:$PATH
-
 sudo pacman -S pandoc
+
 sudo pacman -S texlive-most texlive-core texlive-bin
 
 paru -S whatsapp-nativefier
 
-# Vs Code
-sudo pacman -S gnome-keyring libsecret libgnome-keyring
-
 # Real-time Microphone Noise Cancellation on Linux
-# https://medium.com/@gamunu/linux-noise-cancellation-b9f997f6764d
 
+# https://medium.com/@gamunu/linux-noise-cancellation-b9f997f6764d
 
 yay -S wonderwall
 
