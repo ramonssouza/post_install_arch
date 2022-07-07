@@ -48,3 +48,21 @@ run manjaroptimus-appindicator
 ### Reboot the computer to have it load.
 
 
+# How to enable/disable Bluetooth at startup
+sudo nano /etc/bluetooth/main.conf
+
+## Find this section:
+
+[Policy]
+
+## and go down a bit to find this line:
+
+AutoEnable=false
+
+## If the line above has a # before it, it means the line is commented. Remove the hashtag. If there is a true instead of false, change it to false. Save the file now (Ctrl + s shortcut for nano).
+
+## If you want to enable Bluetooth at startup again, change the line to this:
+
+AutoEnable=true
+
+
