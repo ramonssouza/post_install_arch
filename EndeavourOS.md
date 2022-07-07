@@ -233,3 +233,6 @@ sudo pacman -S gnome-keyring libsecret libgnome-keyring
 # Real-time Microphone Noise Cancellation on Linux
 # https://medium.com/@gamunu/linux-noise-cancellation-b9f997f6764d
 
+
+yay -S wonderwall
+
