@@ -132,6 +132,10 @@ yay -S libreoffice-extension-vero
 
 yay -S ttf-ms-win11-auto
 
+## Google fonts Gui
+yay -S typecatcher
+
+
 # "Mapeamento da mesa digitalizadora Wacom Intuos S Pad pad"
 
 sudo pacman -S kcm-wacomtablet
