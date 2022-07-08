@@ -49,6 +49,7 @@ sudo cp  ./facer_rgb.py  /usr/bin/
 
 curl https://raw.githubusercontent.com/ramonssouza/post_install_arch/main/rgb-keyboard-start.desktop > ~/.config/autostart/rgb-keyboard-start.desktop
 
+### https://www.vivaolinux.com.br/topico/GRUB/Kernel-Panic-em-novo-hardware-apos-clone-com-dd/
 
 # Libreoffice 👨‍💻️
 
