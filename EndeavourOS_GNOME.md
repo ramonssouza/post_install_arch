@@ -1,3 +1,18 @@
+# Hablitar extensões no Gnome 👨‍💻️
+
+git clone https://aur.archlinux.org/chrome-gnome-shell.git
+
+cd chrome-gnome-shell
+
+makepkg -si
+
+sudo pacman -S gnome-backgrounds
+
+
+systemctl start bluetooth.service
+
+systemctl enable bluetooth.service
+
 # Optimus Switch – Another Solution for Optimus Laptops
 
 ## vide: https://discovery.endeavouros.com/nvidia/optimus-switch-another-solution-for-optimus-laptops/2021/04/
@@ -22,20 +37,68 @@ sudo modprobe acpi_call
 
 /etc/modules-load.d/
 
-## KDE (SDDM)
+git clone https://github.com/dglt1/optimus-switch-gdm.git
 
-git clone https://github.com/dglt1/optimus-switch-sddm.git
-
-cd ~/optimus-switch-sddm
+cd ~/optimus-switch-gdm
 
 chmod +x install.sh
 
 sudo ./install.sh
 
+Now we need to make sure that Gnome is using Xorg by default.
 
-## For nVidia mode – sudo set-nvidia.sh
+sudo nano /etc/gdm/custom.conf
 
-## For Intel mode – sudo set-intel.sh
+Remove the # before the line that reads WaylandEnable=false . Hit ctrl-x to exit and Y to save the changes.
+
+    Optimus Switch is now installed. You can now reboot your laptop. After your laptop finishes starting up, you will be in nVidia Prime “Mode”.
+
+To switch modes, open a terminal and type the following:
+
+For nVidia mode – sudo set-nvidia.sh
+
+For Intel mode – sudo set-intel.sh
+
+Then restart the laptop.
+
+Reminder: When switching modes, you have to restart your laptop for the changes to take effect.
+
+Powering down the nVidia card in Intel Mode
+
+Optimus Switch uses the functions in the acpi_call package to turn off the nVidia card when the laptop is in Intel Mode. This allows for longer use time while on battery. To properly setup up acpi_call, we need to do the following.
+
+    The laptop needs to be in Intel Mode . If the user is in nVidia Mode, the laptop will freeze.
+    Open a terminal and type sudo /etc/switch/gpu_switch_check.sh . This will display a list of options that acpi_call can use to turn off the nVidia card.
+    Read through the list of options displayed looking for the line that says “works!”
+    Highlight and copy that line.
+    Open the file /etc/switch/intel/no-optimus.sh by typing sudo nano /etc/switch/intel/no-optimus.sh
+    Near the end of the file, two lines are commented out (#). Remove the (#) and replace the first
+    line with what you copied above.
+
+Example:
+
+In the default file /etc/switch/intel/no-optimus.sh, the two lines look like this:
+
+#echo '\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call
+#echo -n 1 > '/sys/bus/pci/devices/0000:01:00.0/remove'
+
+Remove the (#) before each of these lines so it looks like this:
+
+echo '\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call
+echo -n 1 > '/sys/bus/pci/devices/0000:01:00.0/remove'
+
+Change the '\_SB.PCI0.PEG0.PEGP._OFF' with what you copied in step 4.
+
+    Save and exit the file by hitting ctrl-x and answering Y to save the changes.
+    Type sudo set-intel.sh and reboot the system.
+
+The nVidia card should now be powered off when you are using the Intel iGPU to render graphics. To test this, open a terminal and type one of the two commands.
+
+a. glxinfo|grep "OpenGL vendor|OpenGL renderer"
+
+b. inxi -G
+
+You should only see the Intel iGPU listed.
 
 ## Installing the GUI Indicator/ Switcher Optimus-Indicator
 
